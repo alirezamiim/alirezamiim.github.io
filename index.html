@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alireza | Electrical & Technical Service Engineer</title>
+  <title>Ali Masoumi | Personal Space</title>
   <style>
     :root {
       --primary: #1a1a1a;
@@ -26,16 +26,16 @@
       background-color: var(--bg);
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .container {
-      max-width: 880px;
+      max-width: 820px;
       margin: 0 auto;
-      padding: 40px 24px 60px;
+      padding: 50px 24px 80px;
     }
 
-    /* Hero Profile Section */
+    /* Profile Section */
     .profile-header {
       display: flex;
       flex-direction: row;
@@ -49,7 +49,7 @@
     }
 
     .profile-text h1 {
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       margin: 0 0 6px 0;
       color: var(--primary);
       letter-spacing: -0.5px;
@@ -59,13 +59,13 @@
       font-size: 1.1rem;
       font-weight: 500;
       color: var(--muted);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .badges {
       display: flex;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       flex-wrap: wrap;
     }
 
@@ -80,8 +80,8 @@
     }
 
     .profile-img img {
-      width: 170px;
-      height: 170px;
+      width: 165px;
+      height: 165px;
       border-radius: 16px;
       object-fit: cover;
       box-shadow: 0 6px 16px rgba(0,0,0,0.08);
@@ -89,96 +89,66 @@
     }
 
     .bio {
-      margin: 20px 0 25px;
-      font-size: 1.05rem;
-      color: #444;
+      font-size: 1.08rem;
+      color: #333;
+      line-height: 1.7;
     }
 
-    /* Common Section Styles */
+    /* Section Styling */
     section {
-      margin-top: 50px;
+      margin-top: 55px;
     }
 
     section h2 {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       border-bottom: 2px solid var(--border);
       padding-bottom: 10px;
       color: var(--primary);
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
     }
 
-    /* Grids & Cards */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
       background: var(--card-bg);
-      padding: 20px;
-      border-radius: 10px;
+      padding: 22px;
+      border-radius: 12px;
       border: 1px solid var(--border);
     }
 
     .card h3 {
       margin-top: 0;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       color: var(--primary);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .card p {
       margin: 0;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* Personal Philosophy Quotes or Highlights */
+    .highlight-box {
+      background: #fafbfc;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin-top: 25px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
       color: #555;
     }
 
-    /* Skill Tags Inside Cards */
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .skill-tag {
-      background: #ffffff;
-      border: 1px solid #dcdfe6;
-      padding: 3px 9px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      color: #555;
-    }
-
-    /* News & Activity List */
-    ul.news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    ul.news-list li {
-      margin-bottom: 14px;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: baseline;
-    }
-
-    .date {
-      font-weight: 700;
-      color: var(--accent);
-      font-size: 0.82rem;
-      min-width: 85px;
-    }
-
-    /* Responsive Design */
     @media (max-width: 650px) {
       .profile-header {
         flex-direction: column-reverse;
@@ -198,133 +168,76 @@
 
   <div class="container">
     
-    <!-- Navbar (Commented Out)
-    <nav>
-      <a href="#" class="nav-brand">Alireza</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#interests">Interests</a>
-        <a href="#news">News</a>
-        <a href="assets/pdfs/CV.pdf" target="_blank">CV</a>
-      </div>
-    </nav>
-    -->
-
-    <!-- Profile Header / Bio -->
-    <div class="profile-header" id="about">
+    <!-- Profile Header / Main Intro -->
+    <div class="profile-header">
       <div class="profile-text">
-        <h1>Alireza</h1>
-        <div class="subtitle">Electrical & Technical Service Engineer</div>
+        <h1>Ali Masoumi</h1>
+        <div class="subtitle">Electrical Engineer & Technical Specialist</div>
         
         <div class="badges">
           <span class="badge">📍 London, UK</span>
-          <span class="badge">🎓 B.Sc. Electrical Engineering</span>
-          <span class="badge">🏥 Medical & Lab Equipment</span>
+          <span class="badge">⚙️ Hardware & Field Systems</span>
+          <span class="badge">🏊‍♂️ Endurance Runner & Swimmer</span>
         </div>
 
         <div class="bio">
           <p>
-            I am a Technical Service Engineer with a strong foundation in Electrical Engineering, based in London, UK. I specialize in medical and laboratory device maintenance, embedded circuit design, and technical system troubleshooting.
+            Welcome! Beyond my formal engineering resume, this page reflects my personal interests, philosophy, and the things that keep me curious. I believe engineering is not just about solving technical problems, but about clear communication, continuous learning, and maintaining a balanced mind.
           </p>
         </div>
-
-        <!-- Action Links & Buttons (Commented Out)
-        <div class="links-btn">
-          <a href="assets/pdfs/CV.pdf" target="_blank">📄 Download CV</a>
-          <a href="mailto:your-email@example.com">✉️ Contact Email</a>
-          <a href="https://github.com/alirezamiim" target="_blank">🐙 GitHub</a>
-          <a href="#" target="_blank">💼 LinkedIn</a>
-        </div>
-        -->
       </div>
 
       <div class="profile-img">
-        <img src="assets/photos/5P3A1856.JPG" alt="Alireza" />
+        <img src="assets/photos/5P3A1856.JPG" alt="Ali Masoumi" />
       </div>
     </div>
 
-    <!-- Technical Skills Section -->
-    <section id="skills">
-      <h2>Technical Expertise</h2>
+    <!-- Personal Passions & Pursuits -->
+    <section>
+      <h2>Passions & Mindset</h2>
       <div class="grid-2">
+        
         <div class="card">
-          <h3>⚡ Hardware & Electronics</h3>
-          <p>Design, schematic capture, and hardware prototyping for embedded control systems.</p>
-          <div class="skill-list">
-            <span class="skill-tag">Altium Designer</span>
-            <span class="skill-tag">PCB Layout</span>
-            <span class="skill-tag">ARM Cortex</span>
-            <span class="skill-tag">RF Current Sources</span>
-            <span class="skill-tag">Microcontrollers</span>
-          </div>
+          <h3>🎓 Teaching & Knowledge Sharing</h3>
+          <p>
+            I have a deep passion for teaching and mentoring. Breaking down complex engineering concepts into simple, intuitive explanations is something I truly enjoy—whether it's electronics, troubleshooting strategies, or practical systems.
+          </p>
         </div>
 
         <div class="card">
-          <h3>💻 Data & Software Tools</h3>
-          <p>Data analysis, dashboard visualization, and workplace environment configurations.</p>
-          <div class="skill-list">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Power BI</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Azure Services</span>
-          </div>
+          <h3>📷 Photography & Visual Storytelling</h3>
+          <p>
+            Photography allows me to observe details that often go unnoticed. I enjoy capturing architectural symmetry, historical exhibits, and moments during my travels through a thoughtful lens.
+          </p>
         </div>
+
+        <div class="card">
+          <h3>🏊‍♂️ Endurance & Discipline (Swimming & Running)</h3>
+          <p>
+            Long-distance running and swimming (1500m routines) are my ways of building mental clarity and resilience. The discipline required for endurance sports directly influences how I approach complex technical challenges.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏛️ History & Exploration</h3>
+          <p>
+            Fascinated by ancient civilizations, Mesopotamian artifacts, and museum studies. Traveling to historical destinations and understanding how past cultures built their world inspires my view on modern engineering.
+          </p>
+        </div>
+
       </div>
     </section>
 
-    <!-- Experience & Projects Section -->
-    <section id="projects">
-      <h2>Projects & Field Experience</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>🛠️ Medical & Lab Equipment Engineering</h3>
-          <p>Field service engineering, diagnostic testing, calibration, and maintenance for high-precision healthcare and laboratory systems.</p>
-        </div>
+    <!-- Engineering Philosophy -->
+    <section>
+      <h2>How I Approach Work</h2>
+      <p style="font-size: 1.02rem; color: #444;">
+        In my technical role with medical and precision laboratory equipment, accuracy and methodology are everything. I focus on structured problem-solving, workspace organization (5S principles), and making technical solutions clean, reliable, and easy to maintain.
+      </p>
 
-        <div class="card">
-          <h3>📊 Workspace Continuous Improvement (5S)</h3>
-          <p>Designed and executed an organizational 5S framework to streamline service room operations, inventory layout, and tool availability.</p>
-        </div>
+      <div class="highlight-box">
+        "Simplicity and clear communication are the ultimate forms of technical sophistication."
       </div>
-    </section>
-
-    <!-- Personal Pursuits Section -->
-    <section id="interests">
-      <h2>Personal Pursuits</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>📷 Photography</h3>
-          <p>Capturing visual narrative, architecture, and historical exhibits with a focus on detailed framing.</p>
-        </div>
-
-        <div class="card">
-          <h3>🏛️ Ancient History</h3>
-          <p>Passionate about ancient civilizations, Mesopotamian artifacts, and museum studies.</p>
-        </div>
-
-        <div class="card">
-          <h3>🏊‍♂️ Endurance Training</h3>
-          <p>Active long-distance runner and continuous swimmer (1500m routines and race preparations).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- News & Updates Section -->
-    <section id="news">
-  <!--    <h2>Recent News</h2>
-      <ul class="news-list">
-        <li>
-          <span class="date">SEP 2026</span>
-          <span>Initiated a workplace 5S organization project for field service equipment and tools.</span>
-        </li>
-        <li>
-          <span class="date">AUG 2026</span>
-          <span>Updated technical engineering portfolio & medical field service resume.</span>
-        </li>
-      </ul>-->
     </section>
 
   </div>
