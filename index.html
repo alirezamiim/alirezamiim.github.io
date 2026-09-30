@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="fa" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alireza - Personal Website</title>
+  <title>Alireza | Electrical & Technical Service Engineer</title>
   <style>
     :root {
-      --primary: #2b2b2b;
+      --primary: #1a1a1a;
       --accent: #0066cc;
+      --accent-soft: #eef5ff;
       --bg: #ffffff;
-      --card-bg: #f8f9fa;
+      --card-bg: #f9fbfd;
       --text: #333333;
       --muted: #666666;
+      --border: #eef2f6;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -24,30 +30,31 @@
     }
 
     .container {
-      max-width: 850px;
+      max-width: 880px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 20px 24px 60px;
     }
 
-    /* Top Navigation Bar with Name */
+    /* Header Navigation */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-brand {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--primary);
       text-decoration: none;
+      letter-spacing: -0.3px;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 20px;
     }
 
     .nav-links a {
@@ -62,14 +69,14 @@
       color: var(--accent);
     }
 
-    /* Header Profile Section */
+    /* Hero Profile Section */
     .profile-header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      margin-top: 40px;
-      gap: 30px;
+      margin-top: 45px;
+      gap: 35px;
     }
 
     .profile-text {
@@ -77,15 +84,17 @@
     }
 
     .profile-text h1 {
-      font-size: 2.2rem;
-      margin: 0 0 10px 0;
+      font-size: 2.3rem;
+      margin: 0 0 6px 0;
       color: var(--primary);
+      letter-spacing: -0.5px;
     }
 
     .subtitle {
+      font-size: 1.1rem;
       font-weight: 500;
       color: var(--muted);
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
     .badges {
@@ -96,64 +105,69 @@
     }
 
     .badge {
-      background: #eef5ff;
+      background: var(--accent-soft);
       color: var(--accent);
-      padding: 4px 10px;
-      border-radius: 15px;
+      padding: 4px 12px;
+      border-radius: 20px;
       font-size: 0.85rem;
+      font-weight: 500;
       border: 1px solid #cce0ff;
     }
 
     .profile-img img {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px;
+      width: 170px;
+      height: 170px;
+      border-radius: 16px;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
     }
 
     .bio {
-      margin: 20px 0;
+      margin: 20px 0 25px;
       font-size: 1.05rem;
       color: #444;
     }
 
-    /* Links & Buttons */
+    /* Action Links & Buttons */
     .links-btn {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
     }
 
     .links-btn a {
-      border: 1px solid #ddd;
-      padding: 6px 14px;
-      border-radius: 6px;
+      border: 1px solid #d0d7de;
+      padding: 7px 16px;
+      border-radius: 8px;
       text-decoration: none;
       color: var(--text);
       font-size: 0.9rem;
+      font-weight: 500;
       transition: all 0.2s;
+      background: #fff;
     }
 
     .links-btn a:hover {
       border-color: var(--accent);
       color: var(--accent);
-      background-color: #f4f8ff;
+      background-color: var(--accent-soft);
     }
 
-    /* Sections */
+    /* Common Section Styles */
     section {
-      margin-top: 45px;
+      margin-top: 50px;
     }
 
     section h2 {
-      font-size: 1.4rem;
-      border-bottom: 2px solid #f0f0f0;
-      padding-bottom: 8px;
+      font-size: 1.35rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
       color: var(--primary);
+      margin-bottom: 22px;
     }
 
+    /* Grids & Cards */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -162,55 +176,85 @@
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .card {
       background: var(--card-bg);
-      padding: 18px;
-      border-radius: 8px;
-      border: 1px solid #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
     }
 
     .card h3 {
       margin-top: 0;
       font-size: 1.05rem;
       color: var(--primary);
+      margin-bottom: 8px;
     }
 
     .card p {
-      margin-bottom: 0;
+      margin: 0;
       font-size: 0.95rem;
       color: #555;
     }
 
+    /* Skill Tags Inside Cards */
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .skill-tag {
+      background: #ffffff;
+      border: 1px solid #dcdfe6;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    /* News & Activity List */
     ul.news-list {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     ul.news-list li {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       font-size: 0.95rem;
+      display: flex;
+      align-items: baseline;
     }
 
     .date {
-      font-weight: bold;
+      font-weight: 700;
       color: var(--accent);
-      font-size: 0.85rem;
-      margin-right: 8px;
+      font-size: 0.82rem;
+      min-width: 85px;
     }
 
+    /* Responsive Design */
     @media (max-width: 650px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
       }
       .profile-header {
         flex-direction: column-reverse;
         align-items: center;
+        text-align: center;
+      }
+      .badges {
+        justify-content: center;
+      }
+      .links-btn {
+        justify-content: center;
       }
       .grid-2 {
         grid-template-columns: 1fr;
@@ -221,11 +265,12 @@
 <body>
 
   <div class="container">
-    <!-- Navbar (Name on Left, Links on Right) -->
+    <!-- Navbar -->
     <nav>
       <a href="#" class="nav-brand">Alireza</a>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#interests">Interests</a>
         <a href="#news">News</a>
@@ -233,24 +278,25 @@
       </div>
     </nav>
 
-    <!-- Header / Bio Section -->
+    <!-- Profile Header / Bio -->
     <div class="profile-header" id="about">
       <div class="profile-text">
         <h1>Alireza</h1>
         <div class="subtitle">Electrical & Technical Service Engineer</div>
         
         <div class="badges">
+          <span class="badge">📍 London, UK</span>
           <span class="badge">🎓 B.Sc. Electrical Engineering</span>
-          <span class="badge">⚙️ Technical Specialist</span>
+          <span class="badge">🏥 Medical & Lab Equipment</span>
         </div>
 
         <div class="bio">
           <p>
-            I am a Technical Service Engineer with a background in Electrical Engineering, based in London, UK. I specialize in medical & laboratory equipment, embedded hardware design, and technical troubleshooting.
+            I am a Technical Service Engineer with a strong foundation in Electrical Engineering, based in London, UK. I specialize in medical and laboratory device maintenance, embedded circuit design, and technical system troubleshooting.
           </p>
         </div>
 
-        <!-- Links / Action Buttons -->
+        <!-- Action Links -->
         <div class="links-btn">
           <a href="assets/pdfs/CV.pdf" target="_blank">📄 Download CV</a>
           <a href="mailto:your-email@example.com">✉️ Contact Email</a>
@@ -264,46 +310,85 @@
       </div>
     </div>
 
-    <!-- Featured Projects Section -->
-    <section id="projects">
-      <h2>Featured Projects</h2>
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <h2>Technical Expertise</h2>
       <div class="grid-2">
         <div class="card">
-          <h3>Embedded & Circuit Design</h3>
-          <p>Schematic design with Altium Designer, high-speed current source systems, microcontrollers, and ARM Cortex architectures.</p>
+          <h3>⚡ Hardware & Electronics</h3>
+          <p>Design, schematic capture, and hardware prototyping for embedded control systems.</p>
+          <div class="skill-list">
+            <span class="skill-tag">Altium Designer</span>
+            <span class="skill-tag">PCB Layout</span>
+            <span class="skill-tag">ARM Cortex</span>
+            <span class="skill-tag">RF Current Sources</span>
+            <span class="skill-tag">Microcontrollers</span>
+          </div>
         </div>
+
         <div class="card">
-          <h3>Data & Systems Analysis</h3>
-          <p>Data processing workflows in Python, custom Power BI analytical dashboards, and Linux environment management.</p>
+          <h3>💻 Data & Software Tools</h3>
+          <p>Data analysis, dashboard visualization, and workplace environment configurations.</p>
+          <div class="skill-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Azure Services</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Personal Interests Section -->
+    <!-- Experience & Projects Section -->
+    <section id="projects">
+      <h2>Projects & Field Experience</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>🛠️ Medical & Lab Equipment Engineering</h3>
+          <p>Field service engineering, diagnostic testing, calibration, and maintenance for high-precision healthcare and laboratory systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>📊 Workspace Continuous Improvement (5S)</h3>
+          <p>Designed and executed an organizational 5S framework to streamline service room operations, inventory layout, and tool availability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Pursuits Section -->
     <section id="interests">
-      <h2>Personal Interests & Pursuits</h2>
+      <h2>Personal Pursuits</h2>
       <div class="grid-3">
         <div class="card">
           <h3>📷 Photography</h3>
-          <p>Passionate about capturing visual stories, architecture, and historical sites through photography.</p>
+          <p>Capturing visual narrative, architecture, and historical exhibits with a focus on detailed framing.</p>
         </div>
+
         <div class="card">
           <h3>🏛️ Ancient History</h3>
-          <p>Fascinated by ancient civilizations, artifacts, museum exhibits, and Mesopotamian history.</p>
+          <p>Passionate about ancient civilizations, Mesopotamian artifacts, and museum studies.</p>
         </div>
+
         <div class="card">
-          <h3>🏊‍♂️ Endurance & Sports</h3>
-          <p>Active swimmer focusing on distance routines (1500m) and long-distance running training.</p>
+          <h3>🏊‍♂️ Endurance Training</h3>
+          <p>Active long-distance runner and continuous swimmer (1500m routines and race preparations).</p>
         </div>
       </div>
     </section>
 
-    <!-- Recent News Section -->
+    <!-- News & Updates Section -->
     <section id="news">
-      <h2>Recent Updates</h2>
+      <h2>Recent News</h2>
       <ul class="news-list">
-        <li><span class="date">SEP 2026</span> Initiated a 5S continuous improvement project for service workspace and tools optimization.</li>
-        <li><span class="date">AUG 2026</span> Refined technical engineering portfolio and field service credentials.</li>
+        <li>
+          <span class="date">SEP 2026</span>
+          <span>Initiated a workplace 5S organization project for field service equipment and tools.</span>
+        </li>
+        <li>
+          <span class="date">AUG 2026</span>
+          <span>Updated technical engineering portfolio & medical field service resume.</span>
+        </li>
       </ul>
     </section>
 
