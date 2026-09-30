@@ -29,22 +29,36 @@
       padding: 20px;
     }
 
-    /* Navbar */
+    /* Top Navigation Bar with Name */
     nav {
       display: flex;
-      justify-content: flex-end;
-      gap: 15px;
-      padding: 20px 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
       border-bottom: 1px solid #eee;
     }
 
-    nav a {
+    .nav-brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-links a {
       color: var(--muted);
       text-decoration: none;
       font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: var(--accent);
     }
 
@@ -99,17 +113,17 @@
     }
 
     .bio {
-      margin: 25px 0;
+      margin: 20px 0;
       font-size: 1.05rem;
       color: #444;
     }
 
-    /* Social / Action Buttons */
+    /* Links & Buttons */
     .links-btn {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .links-btn a {
@@ -130,7 +144,7 @@
 
     /* Sections */
     section {
-      margin-top: 40px;
+      margin-top: 45px;
     }
 
     section h2 {
@@ -146,15 +160,29 @@
       gap: 20px;
     }
 
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
     .card {
       background: var(--card-bg);
       padding: 18px;
       border-radius: 8px;
+      border: 1px solid #f0f0f0;
     }
 
     .card h3 {
       margin-top: 0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      color: #555;
     }
 
     ul.news-list {
@@ -175,6 +203,11 @@
     }
 
     @media (max-width: 650px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
       .profile-header {
         flex-direction: column-reverse;
         align-items: center;
@@ -188,17 +221,20 @@
 <body>
 
   <div class="container">
-    <!-- Navbar -->
+    <!-- Navbar (Name on Left, Links on Right) -->
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#news">News</a>
-      <a href="#cv">CV</a>
+      <a href="#" class="nav-brand">Alireza</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Interests</a>
+        <a href="#news">News</a>
+        <a href="assets/pdfs/CV.pdf" target="_blank">CV</a>
+      </div>
     </nav>
 
-    <!-- Header / Bio -->
-    <div class="profile-header">
+    <!-- Header / Bio Section -->
+    <div class="profile-header" id="about">
       <div class="profile-text">
         <h1>Alireza</h1>
         <div class="subtitle">Electrical & Technical Service Engineer</div>
@@ -210,45 +246,64 @@
 
         <div class="bio">
           <p>
-            I am a Technical Service Engineer with a background in Electrical Engineering, currently based in London, UK. I specialize in medical & laboratory equipment, circuit design, and hardware troubleshooting.
+            I am a Technical Service Engineer with a background in Electrical Engineering, based in London, UK. I specialize in medical & laboratory equipment, embedded hardware design, and technical troubleshooting.
           </p>
         </div>
 
-        <!-- Links Buttons -->
+        <!-- Links / Action Buttons -->
         <div class="links-btn">
-          <a href="#">📄 CV</a>
-          <a href="#">✉️ Email</a>
-          <a href="https://github.com/alirezamiim">🐙 GitHub</a>
-          <a href="#">💼 LinkedIn</a>
+          <a href="assets/pdfs/CV.pdf" target="_blank">📄 Download CV</a>
+          <a href="mailto:your-email@example.com">✉️ Contact Email</a>
+          <a href="https://github.com/alirezamiim" target="_blank">🐙 GitHub</a>
+          <a href="#" target="_blank">💼 LinkedIn</a>
         </div>
       </div>
 
       <div class="profile-img">
-        <!-- آدرس عکس قرار داده شد -->
-        <img src="assets/photos/5P3A1856.JPG" alt="Profile Picture" />
+        <img src="assets/photos/5P3A1856.JPG" alt="Alireza" />
       </div>
     </div>
 
-    <!-- Main Content Sections -->
+    <!-- Featured Projects Section -->
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="grid-2">
         <div class="card">
-          <h3>Embedded & Hardware Design</h3>
-          <p>Schematic design with Altium Designer, high-speed current source design, microcontrollers, and ARM Cortex architectures.</p>
+          <h3>Embedded & Circuit Design</h3>
+          <p>Schematic design with Altium Designer, high-speed current source systems, microcontrollers, and ARM Cortex architectures.</p>
         </div>
         <div class="card">
-          <h3>Data & Software Tools</h3>
-          <p>Data processing using Python, Power BI dashboards, and Linux environment configurations.</p>
+          <h3>Data & Systems Analysis</h3>
+          <p>Data processing workflows in Python, custom Power BI analytical dashboards, and Linux environment management.</p>
         </div>
       </div>
     </section>
 
+    <!-- Personal Interests Section -->
+    <section id="interests">
+      <h2>Personal Interests & Pursuits</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>📷 Photography</h3>
+          <p>Passionate about capturing visual stories, architecture, and historical sites through photography.</p>
+        </div>
+        <div class="card">
+          <h3>🏛️ Ancient History</h3>
+          <p>Fascinated by ancient civilizations, artifacts, museum exhibits, and Mesopotamian history.</p>
+        </div>
+        <div class="card">
+          <h3>🏊‍♂️ Endurance & Sports</h3>
+          <p>Active swimmer focusing on distance routines (1500m) and long-distance running training.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent News Section -->
     <section id="news">
-      <h2>Recent News</h2>
+      <h2>Recent Updates</h2>
       <ul class="news-list">
-        <li><span class="date">SEP 2026</span> Initiated 5S continuous improvement project for service workspace organization.</li>
-        <li><span class="date">AUG 2026</span> Updated technical resume & field engineering portfolio.</li>
+        <li><span class="date">SEP 2026</span> Initiated a 5S continuous improvement project for service workspace and tools optimization.</li>
+        <li><span class="date">AUG 2026</span> Refined technical engineering portfolio and field service credentials.</li>
       </ul>
     </section>
 
