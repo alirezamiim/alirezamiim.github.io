@@ -32,41 +32,7 @@
     .container {
       max-width: 880px;
       margin: 0 auto;
-      padding: 20px 24px 60px;
-    }
-
-    /* Header Navigation */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-brand {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      letter-spacing: -0.3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
+      padding: 40px 24px 60px;
     }
 
     /* Hero Profile Section */
@@ -75,7 +41,6 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      margin-top: 45px;
       gap: 35px;
     }
 
@@ -127,31 +92,6 @@
       margin: 20px 0 25px;
       font-size: 1.05rem;
       color: #444;
-    }
-
-    /* Action Links & Buttons */
-    .links-btn {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .links-btn a {
-      border: 1px solid #d0d7de;
-      padding: 7px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all 0.2s;
-      background: #fff;
-    }
-
-    .links-btn a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background-color: var(--accent-soft);
     }
 
     /* Common Section Styles */
@@ -240,20 +180,12 @@
 
     /* Responsive Design */
     @media (max-width: 650px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
       .profile-header {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
       }
       .badges {
-        justify-content: center;
-      }
-      .links-btn {
         justify-content: center;
       }
       .grid-2 {
@@ -265,7 +197,8 @@
 <body>
 
   <div class="container">
-    <!-- Navbar -->
+    
+    <!-- Navbar (Commented Out)
     <nav>
       <a href="#" class="nav-brand">Alireza</a>
       <div class="nav-links">
@@ -277,6 +210,7 @@
         <a href="assets/pdfs/CV.pdf" target="_blank">CV</a>
       </div>
     </nav>
+    -->
 
     <!-- Profile Header / Bio -->
     <div class="profile-header" id="about">
@@ -296,13 +230,14 @@
           </p>
         </div>
 
-        <!-- Action Links -->
+        <!-- Action Links & Buttons (Commented Out)
         <div class="links-btn">
           <a href="assets/pdfs/CV.pdf" target="_blank">📄 Download CV</a>
           <a href="mailto:your-email@example.com">✉️ Contact Email</a>
           <a href="https://github.com/alirezamiim" target="_blank">🐙 GitHub</a>
           <a href="#" target="_blank">💼 LinkedIn</a>
         </div>
+        -->
       </div>
 
       <div class="profile-img">
