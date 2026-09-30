@@ -1,4 +1,258 @@
----
-layout: home
-# Index page
----
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alireza - Personal Website</title>
+  <style>
+    :root {
+      --primary: #2b2b2b;
+      --accent: #0066cc;
+      --bg: #ffffff;
+      --card-bg: #f8f9fa;
+      --text: #333333;
+      --muted: #666666;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Header Profile Section */
+    .profile-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 40px;
+      gap: 30px;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .profile-text h1 {
+      font-size: 2.2rem;
+      margin: 0 0 10px 0;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #eef5ff;
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      border: 1px solid #cce0ff;
+    }
+
+    .profile-img img {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .bio {
+      margin: 25px 0;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    /* Social / Action Buttons */
+    .links-btn {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .links-btn a {
+      border: 1px solid #ddd;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .links-btn a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background-color: #f4f8ff;
+    }
+
+    /* Sections */
+    section {
+      margin-top: 40px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    ul.news-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.news-list li {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .date {
+      font-weight: bold;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 650px) {
+      .profile-header {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Navbar -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#news">News</a>
+      <a href="#cv">CV</a>
+    </nav>
+
+    <!-- Header / Bio -->
+    <div class="profile-header">
+      <div class="profile-text">
+        <h1>Alireza</h1>
+        <div class="subtitle">Electrical & Technical Service Engineer</div>
+        
+        <div class="badges">
+          <span class="badge">🎓 B.Sc. Electrical Engineering</span>
+          <span class="badge">⚙️ Technical Specialist</span>
+        </div>
+
+        <div class="bio">
+          <p>
+            I am a Technical Service Engineer with a background in Electrical Engineering, currently based in London, UK. I specialize in medical & laboratory equipment, circuit design, and hardware troubleshooting.
+          </p>
+        </div>
+
+        <!-- Links Buttons -->
+        <div class="links-btn">
+          <a href="#">📄 CV</a>
+          <a href="#">✉️ Email</a>
+          <a href="https://github.com/alirezamiim">🐙 GitHub</a>
+          <a href="#">💼 LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="profile-img">
+        <!-- عکس خود را جایگزین کنید -->
+        <img src="https://via.placeholder.com/180" alt="Profile Picture" />
+      </div>
+    </div>
+
+    <!-- Main Content Sections -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Embedded & Hardware Design</h3>
+          <p>Schematic design with Altium Designer, high-speed current source design, microcontrollers, and ARM Cortex architectures.</p>
+        </div>
+        <div class="card">
+          <h3>Data & Software Tools</h3>
+          <p>Data processing using Python, Power BI dashboards, and Linux environment configurations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>Recent News</h2>
+      <ul class="news-list">
+        <li><span class="date">SEP 2026</span> Initiated 5S continuous improvement project for service workspace organization.</li>
+        <li><span class="date">AUG 2026</span> Updated technical resume & field engineering portfolio.</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
